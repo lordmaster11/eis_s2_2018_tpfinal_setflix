@@ -22,4 +22,7 @@ public class AppTest
 
     @Test
     public void elFalseAnda() {assertFalse(false);}
+
+    @Test
+    public void shouldAnswerWithTrue2() {assertTrue(true);}
 }
