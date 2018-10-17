@@ -1,5 +1,6 @@
 package setflix;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -17,4 +18,8 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+
+    @Test
+    public void elFalseAnda() {assertFalse(false);}
 }
