@@ -37,11 +37,11 @@ Nro | Nombre |
 1   | Gonzalez Rodrigo |
 2   | Di Costanzo Juan Marcelo |
 3   | Perez Cesar|
-4   | Oscar Ledesma |
+4   | Oscar Lescano |
 5   | Rodriguez Fernando |
 6   | Muñoz Nicolas |
     
-### Entrega
+### Entrega 
 
 -- / 11 / 2018
 
