@@ -41,7 +41,7 @@ Nro | Nombre |
 5   | Rodriguez Fernando |
 6   | Muñoz Nicolas |
     
-### Entrega
+### Entrega 
 
 -- / 11 / 2018
 
