@@ -1,11 +1,21 @@
 package services;
 
 import setflix.Usuario;
+import daos.GenericMongoDAO;
 
 public class LoginService {
 
+
+    GenericMongoDAO<Usuario> mongoDAO;
+
+
     public boolean login(Usuario usuario) {
-        return true;
+        //se consigue la collecion que guarda los usuario y se setea al dao
+        this.mongoDAO = new GenericMongoDAO<Usuario>(Usuario.class);
+        // se guarda el usuario en la bbdd
+        this.mongoDAO.save(usuario);
+        // se recupera el documento usurio y se comparan sus nicknames
+        return usuario.user == this.mongoDAO.itIsSaved(usuario.user).user;
     }
 
     public boolean signUp(Usuario usuario) {
