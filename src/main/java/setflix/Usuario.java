@@ -8,5 +8,4 @@ public class Usuario  {
     public String fechaNacimiento;
 
 
-
 }
