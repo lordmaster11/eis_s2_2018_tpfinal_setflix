@@ -15,7 +15,7 @@ public class LoginService {
         // se guarda el usuario en la bbdd
         this.mongoDAO.save(usuario);
         // se recupera el documento usurio y se comparan sus nicknames
-        return usuario.user == this.mongoDAO.itIsSaved(usuario.user).user;
+        return this.mongoDAO.itIsSaved(usuario.user).contains(usuario.user);
     }
 
     public boolean signUp(Usuario usuario) {

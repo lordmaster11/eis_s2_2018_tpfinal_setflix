@@ -16,7 +16,7 @@ public class LoginStepDefs {
     @Given("^Un usuario$")
     public void unUsuario() throws Throwable {
             this.usuario = new Usuario();
-
+            this.loginService = new LoginService();
     }
 
     @When("^Ingreso mi usuario \"([^\"]*)\" y mi contraseña \"([^\"]*)\"$")

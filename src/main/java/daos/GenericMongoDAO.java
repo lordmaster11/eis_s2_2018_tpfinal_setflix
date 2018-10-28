@@ -1,10 +1,14 @@
 package daos;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import org.bson.types.ObjectId;
+import org.jongo.Find;
 import org.jongo.Jongo;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
+import org.mongojack.JacksonDBCollection;
 import setflix.Usuario;
 
 import java.io.IOException;
@@ -43,9 +47,15 @@ public class GenericMongoDAO<T> {
         return this.mongoCollection.findOne(objectId).as(this.entityType);
     }
 
-    public Usuario itIsSaved (String usuario){
+    public String  itIsSaved (String usuario){
         BasicDBObject query = new BasicDBObject();
-        return (Usuario) query.put(usuario,new BasicDBObject("$exits",true));
+        query.put("user",usuario);
+        DBCursor cursor = mongoCollection.getDBCollection().find(query);
+        return (cursor.hasNext())? cursor.next().toString():"";
+
+
+
+
     }
 
     public List<T> find(String query, Object... parameters) {
