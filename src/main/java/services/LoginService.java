@@ -1,6 +1,6 @@
 package services;
 
-import setflix.Usuario;
+import model.Usuario;
 
 public class LoginService {
 

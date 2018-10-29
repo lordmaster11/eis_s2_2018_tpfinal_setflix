@@ -1,0 +1,47 @@
+
+<div id="register-form" class="container" >
+    <div class="mainbox2 col-md-6 col-sm-8">
+        <div class="panel panel-primary" >
+            <div class="panel-heading">
+                <div class="panel-title">Registrarse</div>
+            </div>
+            <div style="padding-top:30px" class="panel-body" >
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                <form id="registerform" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="firstname" class="col-md-3 control-label">Usuario</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" ng-model="newUsuario.usuario" name="firstname" placeholder="Usuario">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">Contraseña</label>
+                        <div class="col-md-9">
+                            <input type="password" class="form-control" ng-model="newUsuario.password" name="passwd" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">Repita contraseña</label>
+                        <div class="col-md-9">
+                            <input type="password" class="form-control" ng-model="newUsuario.confPassword" name="passwd" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">Email</label>
+                        <div class="col-md-9">
+                            <input class="form-control" ng-model="newUsuario.email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-md-offset-3 col-md-9">
+                            <button id="btn-signup" type="button" ng-click="registrar()" class="btn btn-primary"><i class="icon-hand-right"></i>Registrar</button>
+                            <span style="margin-left:8px;"><li style="list-style-type: none;"><a href="/#">O puedes ingresar como INVITADO</a></li></span>
+                            <span id="errorSpanReg" class="" style="color: red;"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

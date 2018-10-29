@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: black;
+}
+
+
+.form-group {
+	background : #000;
+}
+
+.form-group input{
+
+	margin-bottom : 10px;
+	width: 300px;
+}
+
+.titulo {
+	color : red;
+	text-align:  center;
+	font-family: 'Oswald', sans-serif;
+
+}
+.text-center{
+	align-self: center;
+	text-align: center;
+
+}
+
+.boton-largo{
+
+	width: 300px;
+	background : red;
+	color : #fff;
+	border: none;
+
+}
+
+.boton-largo:hover {
+
+	background: #DE2B0B;
+}
+
+.boton-largo:active {
+
+	background-color: #DE2B0B;
+	border: none;
+}
+
+.boton-medio{
+
+	background-color: #FA1749;
+	width: 175px;
+	color : #fff;
+}
+
+.boton-medio:hover{
+
+	background-color: #C9123B;
+}
+
+.boton-medio:active {
+
+	background-color: #C9123B;
+}
+
+.modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+.modal-footer {
+      background-color: #f9f9f9;
+  }
+
+.color-link a{
+
+  	text-decoration: none;
+  	color : white;
+  }
+
+.nav-colores{
+
+	text-decoration-color: red;
+}
+
+.nav1 {
+
+	background-color: black;
+}
+
+.logo a{
+	color : red;
+	font-family: 'Oswald', sans-serif;
+}
+
+footer a {
+	
+	color :red;
+}
+
+.card-bt{
+
+	padding: 0;
+	margin: 0;
+}

@@ -4,7 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import services.LoginService;
-import setflix.Usuario;
+import model.Usuario;
 
 import static org.junit.Assert.assertTrue;
 
