@@ -21,7 +21,7 @@ Filtrar series                      | 10                |
 
 ### Estado del servidor de integración continua : OK
 
-#Retrospectiva Sprint 2
+### Retrospectiva Sprint 2
 
 A Mejorar                                                     | Celebrar                                   | Action Items                                         |
 --------------------------------------------------------------|--------------------------------------------|------------------------------------------------------|
