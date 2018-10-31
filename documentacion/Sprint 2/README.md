@@ -27,4 +27,4 @@ A Mejorar                                                     | Celebrar        
 --------------------------------------------------------------|--------------------------------------------|------------------------------------------------------|
 Esta costando aprender las tecnologias a utilizar             | Buena investigacion Java API /AJAX         | Comprometerse con menos stories para llegar a tiempo |
 Poco tiempo en la semana para poder aprender e implementar    | Se armo mas documentacion para los sprints |                                                      |
-                                                              | Se tuvieron mas reuniones de equipo        |                                                      |
+
