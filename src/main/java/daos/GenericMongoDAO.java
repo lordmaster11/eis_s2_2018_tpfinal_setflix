@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenericMongoDAO<T> {
-
+    
     private Class<T> entityType;
     protected MongoCollection mongoCollection;
 
