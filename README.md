@@ -37,11 +37,13 @@ Nro | Nombre |
 1   | Gonzalez Rodrigo |
 2   | Di Costanzo Juan Marcelo |
 3   | Perez Cesar|
-4   | Oscar Lescano |
-5   | Rodriguez Fernando |
-6   | Muñoz Nicolas |
-    
-### Entrega 
+4   | Rodriguez Fernando |
+5   | Muñoz Nicolas |
+
+###Documentación
+- [Sprints, Caso de Uso, etc] [6]
+
+### Entrega
 
 -- / 11 / 2018
 
@@ -50,5 +52,6 @@ Nro | Nombre |
 [1]: https://aws.amazon.com/es/devops/continuous-integration/
 [2]: https://travis-ci.org/
 [3]: https://codecov.io/
-[4]: https://realtimeboard.com/app/board/o9J_kyiiKy4=/ 
+[4]: https://realtimeboard.com/app/board/o9J_kyiiKy4=/
 [5]: https://trello.com/b/eQXCvU5z/setflix-eis-unq
+[6]: https://github.com/RoAriel/eis_s2_2018_tpfinal_setflix/tree/master/documentacion
