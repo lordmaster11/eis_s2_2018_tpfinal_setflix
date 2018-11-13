@@ -41,7 +41,7 @@ Nro | Nombre |
 5   | Muñoz Nicolas |
 
 ###Documentación
-- [Sprints, Caso de Uso, etc] [6]
+- [Sprints, Caso de Uso, etc][6]
 
 ### Entrega
 
