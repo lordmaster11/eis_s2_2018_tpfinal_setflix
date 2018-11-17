@@ -1,7 +1,5 @@
 package daos;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DBCursor;
 import org.bson.types.ObjectId;
 import org.jongo.Jongo;
 import org.jongo.MongoCollection;
@@ -12,13 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenericMongoDAO<T> {
-    
+
     private Class<T> entityType;
     protected MongoCollection mongoCollection;
 
     public GenericMongoDAO(Class<T> entityType){
         this.entityType = entityType;
         this.mongoCollection = this.getCollectionFor(entityType);
+    }
+
+    public GenericMongoDAO() {
+
     }
 
     private MongoCollection getCollectionFor(Class<T> entityType) {
@@ -43,13 +45,6 @@ public class GenericMongoDAO<T> {
         return this.mongoCollection.findOne(objectId).as(this.entityType);
     }
 
-    public String  itIsSaved (String key,String usuario){
-        BasicDBObject query = new BasicDBObject();
-        query.put(key ,usuario);
-        DBCursor cursor = mongoCollection.getDBCollection().find(query);
-        return (cursor.hasNext())? cursor.next().toString():"";
-    }
-
     public List<T> find(String query, Object... parameters) {
         try {
             MongoCursor<T> all = this.mongoCollection.find(query, parameters).as(this.entityType);
@@ -71,5 +66,7 @@ public class GenericMongoDAO<T> {
         iterable.forEach(x -> result.add(x));
         return result;
     }
-
 }
+
+
+
