@@ -1,7 +1,6 @@
 package dummies;
 
 import model.Serie;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,10 +1,8 @@
 package model;
 
 public class UsuarioDTO {
-
     private String usuario;
     private String contrasena;
-
 
     public void setUsuario(String user) {
         this.usuario =user;

@@ -3,14 +3,11 @@ package model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
 public class Usuario {
-
     private String usuario;
     private String contrasena;
     private String nombre;
     private String apellido;
-
 
     @JsonCreator
     public Usuario(@JsonProperty("usuario") String usuario,
@@ -57,5 +54,4 @@ public class Usuario {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
-
 }

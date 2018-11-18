@@ -1,4 +1,4 @@
-package services.dataService;
+package services;
 
 import daos.GenericMongoDAO;
 import daos.MongoConnection;
@@ -6,23 +6,20 @@ import dummies.SerieRepositorio;
 import model.Serie;
 import org.jongo.Jongo;
 import org.jongo.MongoCollection;
-
 import java.util.List;
 
-
-public class SeriesServiceImplement extends GenericMongoDAO<Serie> {
-
+public class SeriesService extends GenericMongoDAO<Serie> {
     private Jongo jongo = MongoConnection.getInstance().getJongo();
     private MongoCollection registros  = jongo.getCollection("serie");
     private SerieRepositorio seriesRepository = new SerieRepositorio();
 
-    public SeriesServiceImplement() {
+    public SeriesService() {
         super();
     }
 
     public void crearSetDatosIniciales() {
         for (Serie serie : seriesRepository.getSeries()) {
-            registros.insert(serie);
+            registros.save(serie);
         }
     }
 

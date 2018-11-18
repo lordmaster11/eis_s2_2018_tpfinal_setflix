@@ -3,13 +3,10 @@ package model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-
 public class Serie {
-
     private String nombre;
     private String temporadas;
     private String estado;
-
 
     @JsonCreator
     public Serie(@JsonProperty("nombre") String nombre,
@@ -33,7 +30,6 @@ public class Serie {
     public void setTemporadas(String temporadas) {
         this.temporadas = temporadas;
     }
-
 
     public String getEstado() {
         return estado;

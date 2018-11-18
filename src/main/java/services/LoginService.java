@@ -12,33 +12,32 @@ import org.jongo.MongoCollection;
 import java.util.List;
 
 public class LoginService extends GenericMongoDAO<Serie> {
-
     private Jongo jongo = MongoConnection.getInstance().getJongo();
     private MongoCollection registros  = jongo.getCollection("usuario");
     private UsuarioRepositorio usuarios = new UsuarioRepositorio();
 
-    public boolean login(UsuarioDTO usuario) {
-
-        return ((this.registros.find("{usuario: #, contrasena:#}",
-                usuario.getUsuario(), usuario.getContrasena())
-                .as(Usuario.class)).count() > 0 );
+    public boolean login(String user, String pass) throws Exception {
+        if (this.registros.find("{usuario: #, contrasena:#}",
+                user, pass).as(Usuario.class).count() > 0) {
+            return true;
+        } else {
+             throw new Exception("El usuario no existe, ingrese Usuario y Password correctamente por favor");
+        }
     }
 
-    public boolean signUp(Usuario usuario) {
-
-
-        boolean res = false;
-        if((registros.count("{usuario: #}",
-                usuario.getUsuario())) == 0){
-            registros.insert(usuario);
-            res = true;
+    public void registrar(Usuario usuario) throws Exception {
+        if((this.registros.find("{usuario: #}",
+                usuario.getUsuario())
+                .as(Usuario.class)).count() == 0 ) {
+            registros.save(usuario);
+        } else{
+            throw new Exception("El usuario ya existe");
         }
-        return res;
     }
 
     public void crearSetDatosIniciales() {
         for (Usuario usuario: usuarios.getUsuarios()) {
-            registros.insert(usuario);
+            registros.save(usuario);
         }
     }
 
