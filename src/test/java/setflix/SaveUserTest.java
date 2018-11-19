@@ -7,11 +7,7 @@ import services.LoginService;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Unit test for simple App.
- */
-public class SaveUserTest
-{
+public class SaveUserTest {
     private LoginService mongoService;
 
     @Before
@@ -27,9 +23,7 @@ public class SaveUserTest
 
     @Test
     public void usuariosGuardadas(){
-
         System.out.print(mongoService.getUsuarios().get(0).getUsuario());
         assertTrue(this.mongoService.getUsuarios().size() == 8);
     }
-
 }

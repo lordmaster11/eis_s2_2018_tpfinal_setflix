@@ -1,17 +1,15 @@
 package dummies;
 
 import model.Usuario;
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class UsuarioRepositorio {
     private List<Usuario> usuarios = new ArrayList<>();
 
     public UsuarioRepositorio(){
         //0
-        Usuario usuario1 = new Usuario("Aschisema", "1234", "Marcelo", "Di Costanzo");
+        Usuario usuario1 = new Usuario("Marce", "1234", "Marcelo", "Di Costanzo");
 
         //1
         Usuario usuario2 = new Usuario("Negro", "1234", "Cesar", "Perez");
@@ -33,7 +31,6 @@ public class UsuarioRepositorio {
 
         //7
         Usuario usuario8 = new Usuario("Juan", "1234", "juan", "pppp");
-
 
         usuarios.add(usuario1);usuarios.add(usuario2);usuarios.add(usuario3);
         usuarios.add(usuario4);usuarios.add(usuario5);usuarios.add(usuario6);
