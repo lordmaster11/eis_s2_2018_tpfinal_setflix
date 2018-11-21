@@ -37,8 +37,7 @@ Nro | Nombre |
 1   | Gonzalez Rodrigo |
 2   | Di Costanzo Juan Marcelo |
 3   | Perez Cesar|
-4   | Rodriguez Fernando |
-5   | Muñoz Nicolas |
+4   | Muñoz Nicolas |
 
 ###Documentación
 - [Sprints, Caso de Uso, etc][6]
