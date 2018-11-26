@@ -1,30 +1,51 @@
 package services;
 
-import setflix.Usuario;
 import daos.GenericMongoDAO;
+import daos.MongoConnection;
+import dummies.UsuarioRepositorio;
+import model.Serie;
+import model.Usuario;
+import model.UsuarioDTO;
+import org.jongo.Jongo;
+import org.jongo.MongoCollection;
 
-public class LoginService {
+import java.util.List;
 
+public class LoginService extends GenericMongoDAO<Serie> {
+    private Jongo jongo = MongoConnection.getInstance().getJongo();
+    private MongoCollection registros  = jongo.getCollection("usuario");
+    private UsuarioRepositorio usuarios = new UsuarioRepositorio();
 
-    GenericMongoDAO<Usuario> mongoDAO;
-
-
-    public boolean login(Usuario usuario) {
-        //se consigue la collecion que guarda los usuario y se setea al dao
-        this.mongoDAO = new GenericMongoDAO<Usuario>(Usuario.class);
-        // se recupera el documento usurio y se comparan sus nicknames
-        return this.mongoDAO.itIsSaved("user",usuario.user).contains(usuario.user);
+    public boolean login(String user, String pass) throws Exception {
+        if (this.registros.find("{usuario: #, contrasena:#}",
+                user, pass).as(Usuario.class).count() > 0) {
+            return true;
+        } else {
+             throw new Exception("El usuario no existe, ingrese Usuario y Password correctamente por favor");
+        }
     }
 
-    public boolean signUp(Usuario usuario) {
-        //se consigue la collecion que guarda los usuario y se setea al dao
-        this.mongoDAO = new GenericMongoDAO<Usuario>(Usuario.class);
-        //se registra un usuario nuevo
-        this.mongoDAO.save(usuario);
-        // se recuperan los datos ingresados
-        return this.mongoDAO.itIsSaved("nombre",usuario.nombre).contains(usuario.nombre) &&
-                this.mongoDAO.itIsSaved("apellido",usuario.apellido).contains(usuario.apellido) &&
-                this.mongoDAO.itIsSaved("user",usuario.user).contains(usuario.user) &&
-                this.mongoDAO.itIsSaved("password",usuario.password).contains(usuario.password);
+    public void registrar(Usuario usuario) throws Exception {
+        if((this.registros.find("{usuario: #}",
+                usuario.getUsuario())
+                .as(Usuario.class)).count() == 0 ) {
+            registros.save(usuario);
+        } else{
+            throw new Exception("El usuario ya existe");
+        }
+    }
+
+    public void crearSetDatosIniciales() {
+        for (Usuario usuario: usuarios.getUsuarios()) {
+            registros.save(usuario);
+        }
+    }
+
+    public void eliminarDatos() {
+        registros.drop();
+    }
+
+    public List<Usuario> getUsuarios() {
+        return (copyToList(registros.find().as(Usuario.class)));
     }
 }
