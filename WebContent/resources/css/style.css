@@ -1,0 +1,19 @@
+
+.form-group {
+	background : #000;
+}
+
+.form-group input{
+
+	margin-bottom : 10px;
+	width: 300px;
+}
+
+.titulo {
+	color : red;
+	text-align:  center;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+

@@ -39,7 +39,7 @@ Nro | Nombre |
 3   | Perez Cesar|
 4   | Muñoz Nicolas |
 
-###Documentación
+### Documentación
 - [Sprints, Caso de Uso, etc][6]
 
 ### Entrega
