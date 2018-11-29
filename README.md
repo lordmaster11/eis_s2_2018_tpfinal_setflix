@@ -11,7 +11,7 @@ puedan:
 ### Tecnologías que se usaran
 
 1. Java para el Backend
-2. Angular Js para el Frontend
+2. Srpring MVC
 3. Mongodb con Jongo
 4. Para gestionar las dependencias se creo el proyecto en Maven
 
