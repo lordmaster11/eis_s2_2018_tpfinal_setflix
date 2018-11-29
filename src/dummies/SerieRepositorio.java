@@ -10,7 +10,7 @@ public class SerieRepositorio {
 
     public SerieRepositorio(){
         //0
-        Serie serie1 = new Serie("Game of Thrones", "7", "", "Ciencia Ficcion","");
+        Serie serie1 = new Serie("Game of Thrones", "7", "", "Ciencia Ficcion","https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg");
 
         //1
         Serie serie2 = new Serie("Stranger Things", "2", "", "Ciencia Ficcion", "");

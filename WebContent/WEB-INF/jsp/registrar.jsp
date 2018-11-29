@@ -21,6 +21,21 @@ body {
 </style>
 </head>
 <body>
+    <div>
+    	<nav class="navbar navbar-default" style="background-color: #FF0000">
+    <div class="container-fluid">
+      <div class="navbar-header">
+       
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+		<li> <a style="color: white" href="/login">Volver</a>
+      </ul>
+    </div>
+    </nav>
+	</div>
+	<hr class="hrSuperior">
+
+
 	<div class= "d-flex flex-column align-items-center mt-5 color-link">
 	<h1 class="titulo animated zoomInUp ">S E T F L I X</h1>
 	
