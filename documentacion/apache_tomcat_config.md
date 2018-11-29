@@ -1,4 +1,4 @@
-#Apache Server Setup
+# Apache Server Setup
 =
 1.	descargar el server tomcat desde http://tomcat.apache.org/
 2.	abrir eclipse 
