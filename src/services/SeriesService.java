@@ -15,10 +15,6 @@ public class SeriesService extends GenericMongoDAO<Serie> {
     private MongoCollection registros  = jongo.getCollection("serie");
     private SerieRepositorio seriesRepository = new SerieRepositorio();
 
-    public SeriesService() {
-        super();
-    }
-
     public void crearSetDatosIniciales() {
         for (Serie serie : seriesRepository.getSeries()) {
             registros.save(serie);

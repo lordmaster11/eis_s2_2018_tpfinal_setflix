@@ -5,13 +5,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import model.Usuario;
 import services.LoginService;
+import services.SeriesService;
 
 @Controller
 public class LoginController {
 	LoginService mongo = new LoginService();
+	SeriesService listaSeries = new SeriesService();
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String init(Model model) {
@@ -35,7 +36,7 @@ public class LoginController {
 		try{
 			Usuario user = this.mongo.login(usuario.getUsuario(), usuario.getPassword());
 			model.addAttribute("user",user.getUsuario());
-			return "home";
+			return "/home";
 			
 		}catch(IndexOutOfBoundsException e){
 			model.addAttribute("error","El usuario no existe");
@@ -43,13 +44,13 @@ public class LoginController {
 		}
 	  }
 	
-	@RequestMapping(value = "/login/registrar", method = RequestMethod.GET)
+	@RequestMapping(value = "/registrar", method = RequestMethod.GET)
 	public String showRegistrationForm(Model model)  {
 		model.addAttribute("msg", "Please Enter Your Login Details");
 	    return "registrar";
 	}
 	
-	@RequestMapping(value = "login/registrar",method = RequestMethod.POST)
+	@RequestMapping(value = "/registrar",method = RequestMethod.POST)
 	public String registrar(Model model, @ModelAttribute("loginBean") Usuario usuario) throws Exception {		
 		if(usuario.getUsuario() == "" && usuario.getPassword()== "" && usuario.getNombre() == "" && usuario.getApellido() == ""){
 			model.addAttribute("error", "Ingrese los datos"); 

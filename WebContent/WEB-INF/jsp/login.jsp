@@ -48,7 +48,7 @@ body {
 				<div style="color: red; text-align: center">${error}</div>
 		</div>
 	</form:form>
-	<div class="login-signup-now" style="color: white; text-align: center" >¿Primera vez en Setflix? <a class=" " target="_self" href="/login/registrar">Regístrate ya</a></div>
+	<div class="login-signup-now" style="color: white; text-align: center" >¿Primera vez en Setflix? <a class=" " target="_self" href="/registrar">Regístrate ya</a></div>
 	</div>
 </body>
 </html>
