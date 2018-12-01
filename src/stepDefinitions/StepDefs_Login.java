@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import model.Usuario;
 import model.UsuarioDTO;
 import services.LoginService;
+import services.SeriesService;
 
 import static org.junit.Assert.assertTrue;
 
@@ -13,6 +14,8 @@ public class StepDefs_Login {
 	private UsuarioDTO usuario;
     private Usuario usuarioNuevo;
     private LoginService loginService;
+    private SeriesService seriesService;
+
 
     @Given("^Un usuario$")
     public void unUsuario() throws Throwable {
@@ -76,7 +79,9 @@ public class StepDefs_Login {
     @Given("^Otro usuario nuevo$")
     public void otroUsuarioNuevo() throws Throwable {
         loginService = new LoginService();
+        seriesService = new SeriesService();
         loginService.crearSetDatosIniciales();
+        seriesService.crearSetDatosIniciales();
         this.usuarioNuevo = new Usuario();
     }
 
@@ -95,7 +100,7 @@ public class StepDefs_Login {
     @Then("^El usuario no pudo registrarse$")
     public void elUsuarioNoPudoRegistrarse() throws Throwable {
         assertTrue(this.loginService.getUsuarios().size()==8);
-        loginService.eliminarDatos();
+       
     }
 
 	
