@@ -30,7 +30,7 @@ body {
        
       </div>
       <ul class="nav navbar-nav navbar-right">
-		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: white" href="#">Bienvenido, ${user}<span class="caret"></span></a>
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" style="color: white" href="#">Bienvenido, ${us}<span class="caret"></span></a>
           <ul class="dropdown-menu">
          <!-- <li><a href="#">Modificar perfil</a></li>-->
             <li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
@@ -52,7 +52,7 @@ body {
 		<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(0).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+			<img width=200 height=300 src= ${variable.get(0).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
 	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
@@ -62,7 +62,7 @@ body {
 		<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(1).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+			<img width=200 height=300 src= ${variable.get(1).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
 	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
@@ -72,8 +72,8 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(2).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(2).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
@@ -82,8 +82,8 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(3).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(3).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
@@ -92,7 +92,7 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(4).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+			<img width=200 height=300 src= ${variable.get(4).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
 	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
@@ -107,8 +107,8 @@ body {
 		<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(5).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(5).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
@@ -117,8 +117,8 @@ body {
 		<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(6).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(6).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
@@ -127,8 +127,8 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(7).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(7).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
@@ -137,7 +137,7 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(8).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+			<img width=200 height=300 src= ${variable.get(8).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
 	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
@@ -147,8 +147,8 @@ body {
 	  	<div class="card">
 		<h5 class="card-title" style="text-align: center">${variable.get(9).nombre}</h5>
 		<div class="card-body">
-			<img width=200 height=300 src="https://image.tmdb.org/t/p/w154/j17CGYDlysZjtSqJfbRKS6GmJKF.jpg" title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+			<img width=200 height=300 src= ${variable.get(9).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
+	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>

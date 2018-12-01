@@ -29,7 +29,7 @@ public class LoginService extends GenericMongoDAO<Serie> {
     	return usuario.get(0);        
     }
 
-    public Usuario registrar(Usuario user ) throws Exception {   	
+    public Usuario registrar(Usuario user) throws Exception {   	
     	List<Usuario> usuarios = copyToList(registros.find("{usuario: #}",
                 user.getUsuario()).as(Usuario.class));
     	
@@ -54,4 +54,11 @@ public class LoginService extends GenericMongoDAO<Serie> {
     public List<Usuario> getUsuarios() {
         return (copyToList(registros.find().as(Usuario.class)));
     }
+
+	public Usuario getUser(String user) {
+		List<Usuario> usuarios = copyToList(registros.find("{usuario: #}",
+                user).as(Usuario.class));
+    	
+		return usuarios.get(0);
+	}
 }

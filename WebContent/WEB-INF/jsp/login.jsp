@@ -44,8 +44,9 @@ body {
 		<div class="form-group">
 				<input type="text" name="usuario" class="form-control" id="exampleInputEmail1"  placeholder="Usuario" />
 				<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" />
-				<input style="color: white; background-color: #FF0000" value="Ingresar" name="button" type="submit"/>
-				<div style="color: red; text-align: center">${error}</div>
+				
+					<input style="color: white; background-color: #FF0000" value="Ingresar" name="button" type="submit"/>
+					<div style="color: red; text-align: center">${error}</div>
 		</div>
 	</form:form>
 	<div class="login-signup-now" style="color: white; text-align: center" >¿Primera vez en Setflix? <a class=" " target="_self" href="/registrar">Regístrate ya</a></div>
