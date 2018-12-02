@@ -7,6 +7,7 @@ import daos.GenericMongoDAO;
 import daos.MongoConnection;
 import dummies.SerieRepositorio;
 import model.Serie;
+import model.Usuario;
 
 import java.util.List;
 
@@ -28,4 +29,11 @@ public class SeriesService extends GenericMongoDAO<Serie> {
     public void eliminarDatos() {
         registros.drop();
     }
+
+	public Serie getForName(String serie) {
+		List<Serie> series = copyToList(registros.find("{nombre: #}",
+				serie).as(Serie.class));
+    	
+		return series.get(0);
+	}
 }

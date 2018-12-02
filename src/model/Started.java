@@ -9,8 +9,11 @@ public class Started {
 		LoginService loginService = new LoginService();
 		SeriesService serieService = new SeriesService();
 			
-		//loginService.crearSetDatosIniciales();
-		//serieService.crearSetDatosIniciales();
+		//loginService.deleteAll();
+		//serieService.deleteAll();
+		
+		loginService.crearSetDatosIniciales();
+		serieService.crearSetDatosIniciales();
 	}
 }
 
