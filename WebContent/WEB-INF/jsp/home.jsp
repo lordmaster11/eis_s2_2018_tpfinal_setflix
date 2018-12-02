@@ -46,119 +46,49 @@ body {
 	</div>
 	<br>
 			
-	
-	<!-- CATALOGO -->
-	<div class="card-deck">
-		<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(0).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(0).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+	<ul>
+		<%! int fontSize; %> 
+		<%fontSize = 0;%>
+
+			<c:forEach var="serie" items="${variable}">
+
+			<% if (fontSize == 0 || fontSize == 5 ) { %>
+			<div class="row">
+         		<div class="card-deck">
+         			<%fontSize = 0;%>
+    		<% } %>
+		   
+         			
+			<div class="card" style="background-color: #333; border-color: #333;" style="width: 15rem;" >
+				<h5 class="card-title" style="text-align: center">${serie.nombre}</h5>
+			<div class="card-body">
+			<img width=200 height=300 src= ${serie.imagen} title=${serie.nombre}>
+				<br>
+	      		<p class="card-text" style= "color: white" style= "text-align: center" >${serie.temporadas}  TEMPORADAS  </p>
 	    	</div>
 	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
+	      		<small class="text-muted">
+	      		
+	      		<button class="btn btn-lg btn-block boton-largo card-bt" name = buttonSerie  type="button"
+	      		 onclick="window.location.href='${us}/${serie.nombre}';">
+ 
+	      		Ir a la Serie 
+	      		</button></small>
+					
 	    	</div>
 	  	</div>
-		<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(1).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(1).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(2).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(2).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(3).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(3).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(4).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(4).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	</div>
-	<br><br>
-	
-	
-		<div class="card-deck">
-		<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(5).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(5).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-		<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(6).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(6).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(7).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(7).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(8).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(8).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      		<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	  	<div class="card">
-		<h5 class="card-title" style="text-align: center">${variable.get(9).nombre}</h5>
-		<div class="card-body">
-			<img width=200 height=300 src= ${variable.get(9).imagen} title="Junto a los dioses: Los últimos 49 días (2018)" alt="Junto a los dioses: Los últimos 49 días (2018)">
-	      	<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
-	    	</div>
-	    	<div class="card-footer">
-	      		<small class="text-muted"><button type="button" class="btn btn-lg btn-block boton-largo card-bt" href="index.html">Ir a la Serie</button></small>
-	    	</div>
-	  	</div>
-	</div>
-	<br><br>
-	
-	
-	
+	    	
+	    	<% if (fontSize == 4) { %>
+	    		</div>
+	    		 </div>
+				<br><br>
+    		  <% } %>
+    		  
+    		  <%fontSize ++;%>
+		</c:forEach>		
+	</ul>
+
+
 	
 </body>
 </html>

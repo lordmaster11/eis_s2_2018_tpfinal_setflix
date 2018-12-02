@@ -1,9 +1,13 @@
 package controllers;
 
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,19 +31,28 @@ public class HomeController {
 		
 		model.addAttribute("us", user);
 		model.addAttribute("variable", series);
-		model.addAttribute("cant", 9);
 		
 		Usuario us = loginService.getUser(user);
-		
-		
-		System.out.println(us.getApellido());
-		
-		
-//		List<Serie> series = this.listaSeries.todasLasSeries();	
-//        model.addAttribute("variable", series);
-//		
-        
 	}
+	
+
+//	@RequestMapping(method = RequestMethod.GET)
+//	public String submit(@ModelAttribute("saveOrUpdateUser") String name , Model model) {
+//		
+//		System.out.println(name);
+//		
+//		return"pp";
+//	}
+
+}
+
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/*
@@ -131,5 +144,4 @@ public class HomeController {
 		return "home";
 	}
 		*/	
-}
 
