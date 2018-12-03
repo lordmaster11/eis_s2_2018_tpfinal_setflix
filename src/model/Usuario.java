@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.tools.javac.util.List;
 
 public class Usuario {
     private String usuario;
