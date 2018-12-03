@@ -8,19 +8,23 @@ public class Serie {
     private String temporadas;
     private String descripcion;
     private String genero;
-    private String imagen;
+    private String imagen; 
+    private String trailer;
 
     @JsonCreator
     public Serie(@JsonProperty("nombre") String nombre,
                  @JsonProperty("temporadas") String temporadas,
                  @JsonProperty("descripcion") String descripcion,
                  @JsonProperty("genero") String genero,
-                 @JsonProperty("imagen") String imagen){
+                 @JsonProperty("imagen") String imagen,
+                 @JsonProperty("trailer") String trailer) {
+    				 
         this.nombre = nombre;
         this.temporadas = temporadas;
         this.descripcion = descripcion;
         this.genero = genero;
         this.imagen = imagen;
+        this.trailer = trailer;
     }
 
     public String getNombre() {
@@ -40,8 +44,8 @@ public class Serie {
     public String getDescripcion() {
         return descripcion;
     }
-    public void setEstado(String estado) {
-        this.descripcion = estado;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
     
     public String getGenero() {
@@ -56,5 +60,12 @@ public class Serie {
     }
     public void setImagen(String imagen) {
         this.imagen = imagen;
+    }
+    
+    public String getTrailer() {
+        return trailer;
+    }
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
     }
 }

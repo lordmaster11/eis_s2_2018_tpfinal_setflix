@@ -24,7 +24,7 @@ body {
 <body>
 
     <div>
-    	<nav class="navbar navbar-default" style="background-color: #FF0000">
+    	<nav class="navbar navbar-default" style="background-color: #FF0000; width: 100%">
     <div class="container-fluid">
       <div class="navbar-header">
        
@@ -53,24 +53,23 @@ body {
 			<c:forEach var="serie" items="${variable}">
 
 			<% if (fontSize == 0 || fontSize == 5 ) { %>
-			<div class="row">
+			<div class="row" style="width: 100%">
          		<div class="card-deck">
          			<%fontSize = 0;%>
     		<% } %>
 		   
          			
 			<div class="card" style="background-color: #333; border-color: #333;" style="width: 15rem;" >
-				<h5 class="card-title" style="text-align: center">${serie.nombre}</h5>
+				<h5 class="card-title" style="color: white; text-align: center; padding-top: 10px">${serie.nombre}</h5>
 			<div class="card-body">
-			<img width=200 height=300 src= ${serie.imagen} title=${serie.nombre}>
+			<img width=200 height=300 src= ${serie.imagen} title=${serie.nombre} style="border-style:solid;border-width:3px;color:white">
 				<br>
-	      		<p class="card-text" style= "color: white" style= "text-align: center" >${serie.temporadas}  TEMPORADAS  </p>
 	    	</div>
 	    	<div class="card-footer">
 	      		<small class="text-muted">
 	      		
 	      		<button class="btn btn-lg btn-block boton-largo card-bt" name = buttonSerie  type="button"
-	      		 onclick="window.location.href='${us}/${serie.nombre}';">
+	      		 onclick="window.location.href='${us}/${serie.nombre}';" style="color: white; background-color: #FF0000">
  
 	      		Ir a la Serie 
 	      		</button></small>
