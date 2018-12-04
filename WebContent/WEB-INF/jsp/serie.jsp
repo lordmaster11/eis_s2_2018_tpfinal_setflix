@@ -129,7 +129,8 @@ input[type="radio"]:checked ~ label {
 		</form>
 		</div> 
 			<h5 class="card-text" style="padding-bottom: 20px">Trailer</h5>
-			<div style="text-align: center"><iframe width="560" height="315" src=${trailer} allowfullscreen></iframe>
+			<div style="text-align: center"><iframe width="560" height="315" src= ${trailer} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
 			</div>
 		</div>		
 	</div>
